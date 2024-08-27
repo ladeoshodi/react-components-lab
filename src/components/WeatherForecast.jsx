@@ -1,10 +1,13 @@
 import "./WeatherForecast.css";
 
-function WeatherForecast({ day, img, imgAlt, conditions, time }) {
+function WeatherIcon({ img, imgAlt }) {
+  return <img src={img} alt={imgAlt} />;
+}
+
+function WeatherData({ day, conditions, time }) {
   return (
-    <div className="weather">
+    <>
       <h2>{day}</h2>
-      <img src={img} alt={imgAlt} />
       <p>
         <span>conditions: </span>
         {conditions}
@@ -13,6 +16,15 @@ function WeatherForecast({ day, img, imgAlt, conditions, time }) {
         <span>time: </span>
         {time}
       </p>
+    </>
+  );
+}
+
+function WeatherForecast({ day, img, imgAlt, conditions, time }) {
+  return (
+    <div className="weather">
+      <WeatherIcon img={img} imgAlt={imgAlt} />
+      <WeatherData day={day} conditions={conditions} time={time} />
     </div>
   );
 }
