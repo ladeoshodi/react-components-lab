@@ -1,5 +1,6 @@
 section {
   display: flex;
+  background-color: white;
 }
 
 section .weather {

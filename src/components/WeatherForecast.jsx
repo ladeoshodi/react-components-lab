@@ -1,15 +1,17 @@
 import "./WeatherForecast.css";
 
-function WeatherForecast() {
+function WeatherForecast({ day, img, imgAlt, conditions, time }) {
   return (
     <div className="weather">
-      <h2>Day of the Week</h2>
-      <img src="" alt="" />
+      <h2>{day}</h2>
+      <img src={img} alt={imgAlt} />
       <p>
-        <span>conditions: </span>current weather conditions
+        <span>conditions: </span>
+        {conditions}
       </p>
       <p>
-        <span>time: </span>time of day
+        <span>time: </span>
+        {time}
       </p>
     </div>
   );

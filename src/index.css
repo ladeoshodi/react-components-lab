@@ -28,6 +28,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: url(https://pages.git.generalassemb.ly/modular-curriculum-all-courses/react-components-lab/assets/Reactville.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h1 {
